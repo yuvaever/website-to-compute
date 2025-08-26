@@ -1,56 +1,726 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <!-- 
-      This is an HTML comment
-      You can write text in a comment and the content won't be visible in the page
-    -->
-
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="icon" href="https://glitch.com/favicon.ico" />
-
-  <!--
-      This is the page head - it contains info the browser uses
-      Like the title, which appears on the browser tab but not inside the page
-      Further down you'll see the content that displays in the page
-    -->
-  <title>Hello World!</title>
-
-  <!-- The website stylesheet -->
-  <link rel="stylesheet" href="/style.css" />
-
-  <!-- The website JavaScript file -->
-  <script src="/script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Yuvaraj Ilangovan - IT Software Cloud Services Global Delivery Leader with 24+ years experience in enterprise-scale transformations for Fortune 100/500 organizations.">
+    <meta name="keywords" content="Cloud Services, Global Delivery, Enterprise Architecture, Digital Transformation, IT Leadership, Azure, AWS, GCP">
+    <meta name="author" content="Yuvaraj Ilangovan">
+    
+    <!-- Open Graph Meta Tags for LinkedIn/Social Sharing -->
+    <meta property="og:title" content="Yuvaraj Ilangovan - IT Software Cloud Services Global Delivery Leader">
+    <meta property="og:description" content="24+ years experience delivering enterprise-scale Cloud & Digital transformations for Fortune 100/500 organizations. Expert in Azure, GCP, AWS, and global team leadership.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
+    
+    <title>Yuvaraj Ilangovan - IT Software Cloud Services Global Delivery Leader</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Styles -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        * { 
+            font-family: 'Inter', sans-serif; 
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .skill-highlight {
+            background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+            border: 2px solid #10b981;
+        }
+        
+        .scroll-smooth {
+            scroll-behavior: smooth;
+        }
+        
+        .animate-bounce {
+            animation: bounce 1s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% {
+                transform: translate3d(0,0,0);
+            }
+            40%, 43% {
+                transform: translate3d(0,-30px,0);
+            }
+            70% {
+                transform: translate3d(0,-15px,0);
+            }
+            90% {
+                transform: translate3d(0,-4px,0);
+            }
+        }
+    </style>
 </head>
-
-<body>
-  <!--
-      The body includes the content you see in the page
-      Each element is defined using tags, like this <div></div>
-      The attributes like class="wrapper" let us style elements in the CSS
-    -->
-  <div class="wrapper">
-    <div class="content" role="main">
-      <h1 class="title">Oh hi website!</h1>
-      <img src="/cool-website.svg" class="illustration" alt="cool website" />
-      <div class="instructions">
-        <p>
-          Fork <a href="https://github.com/glitchdotcom/website-to-compute">this project</a> and open it in a GitHub Codespace.
-        </p>
-        <p> Follow the steps in the README to deploy your new website to Fastly in a few steps!
-        </p>
-
-      </div>
-
-      <footer class="footer">
-        <div>
-          <a class="remix" href="https://github.com/glitchdotcom/website-to-compute">🚧 Get your own site</a>
+<body class="scroll-smooth">
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-slate-800">Yuvaraj Ilangovan</div>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-slate-600 hover:text-slate-900 transition-colors font-medium">About</a>
+                    <a href="#skills" class="text-slate-600 hover:text-slate-900 transition-colors font-medium">Skills</a>
+                    <a href="#experience" class="text-slate-600 hover:text-slate-900 transition-colors font-medium">Experience</a>
+                    <a href="#projects" class="text-slate-600 hover:text-slate-900 transition-colors font-medium">Projects</a>
+                    <a href="#contact" class="bg-slate-800 hover:bg-slate-700 text-white px-6 py-2 rounded-lg transition-colors">Get In Touch</a>
+                </nav>
+            </div>
         </div>
-      </footer>
-    </div>
-  </div>
-</body>
+    </header>
 
+    <!-- Hero Section -->
+    <section class="min-h-screen gradient-bg flex items-center justify-center pt-20">
+        <div class="max-w-7xl mx-auto px-6 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-4">
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 rounded-full text-sm font-medium">
+                            <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                            Available for New Opportunities
+                        </div>
+                        
+                        <h1 class="text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+                            Yuvaraj 
+                            <span class="block text-slate-700">Ilangovan</span>
+                        </h1>
+                        
+                        <p class="text-xl lg:text-2xl text-slate-600 font-light leading-relaxed">
+                            IT Software Cloud Services Global Delivery Leader
+                        </p>
+                        
+                        <p class="text-lg text-slate-500 leading-relaxed max-w-2xl">
+                            Spearheading Cloud & Digital large-scale Transformation Program Delivery Management 
+                            for Fortune 100 / 500 organizations across global markets with 24+ years of experience.
+                        </p>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-4">
+                        <button onclick="scrollToSection('#contact')" class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-lg text-lg transition-colors">
+                            Let's Connect
+                        </button>
+                        
+                        <button onclick="downloadResume()" class="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-3 rounded-lg text-lg transition-colors">
+                            📄 Download Resume
+                        </button>
+                    </div>
+
+                    <div class="flex flex-wrap items-center gap-6 pt-4 text-slate-600">
+                        <div class="flex items-center gap-2">
+                            <span>📍</span>
+                            <span>Bangalore, India</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>📞</span>
+                            <span>+91-8123334373</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span>📧</span>
+                            <span>yuva_endeavour@aol.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative">
+                    <div class="w-full h-96 lg:h-[500px] rounded-2xl shadow-2xl overflow-hidden">
+                        <img 
+                            src="https://images.unsplash.com/photo-1667984390538-3dea7a3fe33d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Cloud Computing and Data Analytics"
+                            class="w-full h-full object-cover object-center"
+                        />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/30 to-transparent"></div>
+                    </div>
+                    
+                    <!-- Floating Stats -->
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-lg p-6 border border-slate-200">
+                        <div class="text-3xl font-bold text-slate-800">24+</div>
+                        <div class="text-sm text-slate-600">Years Experience</div>
+                    </div>
+                    
+                    <div class="absolute -top-6 -right-6 bg-white rounded-xl shadow-lg p-6 border border-slate-200">
+                        <div class="text-3xl font-bold text-emerald-600">500+</div>
+                        <div class="text-sm text-slate-600">Fortune Companies</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-16">
+                <button onclick="scrollToSection('#about')" class="animate-bounce p-2 rounded-full bg-white shadow-lg border border-slate-200 hover:shadow-xl transition-all">
+                    ⬇️
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">About Me</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    A seasoned IT Software Cloud Services Global Delivery Management leader combining deep architecture acumen with 
+                    delivery excellence, risk governance, and measurable client KPIs across international markets.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <div class="space-y-6">
+                        <p class="text-lg text-slate-700 leading-relaxed">
+                            With <strong>24 years of IT Software Cloud Services Global Delivery Management</strong> and Software Product Engineering 
+                            industry experience, including a decade of hands-on delivery management in North America, 
+                            I specialize in delivering enterprise-scale Cloud, Digital, IoT, AI/ML and Data Modernization programs 
+                            across multiple geographical markets.
+                        </p>
+                        
+                        <p class="text-lg text-slate-700 leading-relaxed">
+                            My expertise spans <strong>Cloud & Digital Transformation</strong> using Microsoft Azure, Google Cloud Platform (GCP), 
+                            AWS, Salesforce Cloud, and Oracle Cloud, covering re-architecture, modernization, hybrid/multi-cloud deployments, 
+                            and managed support services for PaaS and SaaS products.
+                        </p>
+
+                        <p class="text-lg text-slate-700 leading-relaxed">
+                            I've delivered Digital Transformation programs for <strong>Fortune 100 / 500</strong> diversified domain clients including 
+                            CoreLogic, Travelers Insurance, UBS Bank, ViacomCBS, Paramount Pictures, Amadeus, Chevron and Merck.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-semibold text-slate-900">Key Certifications</h3>
+                        
+                        <div class="space-y-3">
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-700 mb-2">✅ Completed</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-sm px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">MS-Azure Cloud Specialist</span>
+                                    <span class="text-sm px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">Enterprise Architect (TOGAF 9.2)</span>
+                                    <span class="text-sm px-3 py-1 bg-emerald-50 text-emerald-700 border border-emerald-200 rounded-full">Certified Advanced RPA Professional</span>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h4 class="text-sm font-medium text-slate-700 mb-2">🎯 Currently Pursuing</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="text-sm px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full">SAFe Agile Lean Portfolio Management 6.0</span>
+                                    <span class="text-sm px-3 py-1 bg-blue-50 text-blue-700 border border-blue-200 rounded-full">Data Science and AI for Managers</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-50 rounded-xl p-6 border border-slate-200">
+                        <p class="text-slate-700 italic">
+                            "H-1B visa holder with approved I-140, authorized to work in the USA and open to global relocation. 
+                            Committed to emerging technology adoption and translating innovation into competitive advantage."
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 gap-6">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-emerald-600 text-3xl">🌐</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">Global Expertise</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Extensive stakeholder engagement across USA, Canada, UK, Europe, Gulf, and Asia
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-blue-600 text-3xl">👥</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">Team Leadership</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Directed multi-geo distributed teams of 80-200 professionals with line management of 150+ engineers
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-purple-600 text-3xl">📈</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">Budget Management</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Managed programs with budgets ranging from USD 5M to 25M across various engagement models
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl p-6 shadow-lg border border-slate-200 card-hover">
+                        <div class="flex items-start gap-4">
+                            <div class="text-amber-600 text-3xl">🏆</div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-slate-900 mb-2">Enterprise Scale</h3>
+                                <p class="text-slate-600 leading-relaxed">
+                                    Delivered enterprise-scale Cloud, Digital, IoT, AI/ML and Data Modernization programs
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Core Competencies</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Comprehensive expertise spanning technology leadership, enterprise architecture, 
+                    and large-scale program delivery across multiple domains.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-8 mb-16">
+                <!-- Highlighted Core Specialty -->
+                <div class="skill-highlight rounded-xl p-6 shadow-xl card-hover">
+                    <div class="flex items-center gap-3 mb-2">
+                        <div class="text-emerald-600 text-3xl">☁️</div>
+                        <h3 class="text-lg text-emerald-900 font-semibold">IT Software Cloud Services Global Delivery Management</h3>
+                    </div>
+                    <div class="inline-flex items-center gap-1 px-3 py-1 bg-emerald-200 text-emerald-800 rounded-full text-xs font-medium mb-4">
+                        <div class="w-2 h-2 bg-emerald-600 rounded-full"></div>
+                        Core Specialty
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-emerald-200 text-emerald-800 rounded-full">Global Delivery Leadership</span>
+                        <span class="text-xs px-2 py-1 bg-emerald-200 text-emerald-800 rounded-full">Enterprise Cloud Transformation</span>
+                        <span class="text-xs px-2 py-1 bg-emerald-200 text-emerald-800 rounded-full">Multi-Geo Team Management</span>
+                        <span class="text-xs px-2 py-1 bg-emerald-200 text-emerald-800 rounded-full">Fortune 100/500 Client Delivery</span>
+                        <span class="text-xs px-2 py-1 bg-emerald-200 text-emerald-800 rounded-full">Program Portfolio Management</span>
+                        <span class="text-xs px-2 py-1 bg-emerald-200 text-emerald-800 rounded-full">Cross-Cultural Delivery</span>
+                    </div>
+                </div>
+
+                <!-- Other Skills -->
+                <div class="bg-white rounded-xl p-6 shadow-lg border-0 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-blue-600 text-3xl">☁️</div>
+                        <h3 class="text-lg text-slate-900 font-semibold">Cloud & Digital Transformation</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Microsoft Azure</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Google Cloud Platform (GCP)</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">AWS</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Salesforce Cloud</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Oracle Cloud</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Multi-Cloud Deployments</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Hybrid Cloud</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">PaaS & SaaS</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg border-0 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-emerald-600 text-3xl">🏗️</div>
+                        <h3 class="text-lg text-slate-900 font-semibold">Architecture & Engineering</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Enterprise Architecture (TOGAF)</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Solution Architecture</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Microservices</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">API Management</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Containerization</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Serverless</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Edge Computing</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">MERN Stack</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg border-0 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-purple-600 text-3xl">💾</div>
+                        <h3 class="text-lg text-slate-900 font-semibold">Data & Analytics</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Data Modernization</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Big Data Analytics</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Data Engineering</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">ETL/ELT</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Data Warehouse</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Data Fabric</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Power BI</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Tableau</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg border-0 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-indigo-600 text-3xl">🤖</div>
+                        <h3 class="text-lg text-slate-900 font-semibold">Emerging Technologies</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">AI/ML</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">IoT</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">RPA/IPA</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Low/No-Code Platforms</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">AIOps</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Automation Anywhere</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Microsoft OpenAI</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Gen AI</span>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg border-0 card-hover">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="text-amber-600 text-3xl">📊</div>
+                        <h3 class="text-lg text-slate-900 font-semibold">Program & Portfolio Management</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">SAFe Agile</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Scrum</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Kanban</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Agile Release Trains (ARTs)</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Risk Management</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Change Management</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">Release Management</span>
+                        <span class="text-xs px-2 py-1 bg-slate-100 text-slate-700 rounded-full">P&L Ownership</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-slate-900 mb-6">Let's Connect</h2>
+                <p class="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
+                    Ready to drive your next enterprise transformation? Let's discuss how my experience 
+                    can accelerate your organization's cloud and digital initiatives.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Information -->
+                <div class="lg:col-span-1 space-y-6">
+                    <div class="bg-slate-50 rounded-xl p-6 shadow-lg border-0">
+                        <h3 class="text-xl text-slate-900 font-semibold mb-6 flex items-center gap-2">
+                            💬 Get In Touch
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                                <span class="text-blue-600 text-xl">📧</span>
+                                <div>
+                                    <div class="text-sm text-slate-600">Email</div>
+                                    <a href="mailto:yuva_endeavour@aol.com" class="font-medium text-slate-900 hover:text-slate-700">
+                                        yuva_endeavour@aol.com
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                                <span class="text-emerald-600 text-xl">📞</span>
+                                <div>
+                                    <div class="text-sm text-slate-600">Phone</div>
+                                    <a href="tel:+918123334373" class="font-medium text-slate-900 hover:text-slate-700">
+                                        +91-8123334373
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-3 p-3 bg-white rounded-lg">
+                                <span class="text-purple-600 text-xl">📍</span>
+                                <div>
+                                    <div class="text-sm text-slate-600">Location</div>
+                                    <div class="font-medium text-slate-900">Bangalore, India</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-50 rounded-xl p-6 shadow-lg border-0">
+                        <h3 class="text-xl text-slate-900 font-semibold mb-6 flex items-center gap-2">
+                            🌐 Availability
+                        </h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start gap-2">
+                                <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span class="text-sm text-slate-700">H-1B visa holder with approved I-140</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span class="text-sm text-slate-700">Authorized to work in the USA</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span class="text-sm text-slate-700">Open to global relocation</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <div class="w-1.5 h-1.5 bg-emerald-500 rounded-full mt-2 flex-shrink-0"></div>
+                                <span class="text-sm text-slate-700">Available for immediate opportunities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Main Contact Content -->
+                <div class="lg:col-span-2 space-y-8">
+                    <div class="bg-white rounded-xl p-6 shadow-lg border-0">
+                        <h3 class="text-xl text-slate-900 font-semibold mb-6 flex items-center gap-2">
+                            💼 Preferred Leadership Roles
+                        </h3>
+                        <div class="grid md:grid-cols-2 gap-3">
+                            <span class="text-sm px-3 py-2 bg-slate-100 text-slate-800 rounded-full text-center">VP of Engineering</span>
+                            <span class="text-sm px-3 py-2 bg-slate-100 text-slate-800 rounded-full text-center">Chief Technology Officer</span>
+                            <span class="text-sm px-3 py-2 bg-slate-100 text-slate-800 rounded-full text-center">Global Delivery Director</span>
+                            <span class="text-sm px-3 py-2 bg-slate-100 text-slate-800 rounded-full text-center">Program Portfolio Director</span>
+                            <span class="text-sm px-3 py-2 bg-slate-100 text-slate-800 rounded-full text-center">Enterprise Architecture Leader</span>
+                            <span class="text-sm px-3 py-2 bg-slate-100 text-slate-800 rounded-full text-center">Digital Transformation Head</span>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 rounded-xl p-6 shadow-lg border-0">
+                            <h3 class="text-lg font-semibold text-slate-900 mb-3">Enterprise Consulting</h3>
+                            <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                                Strategic guidance for large-scale digital transformations, 
+                                cloud migrations, and technology modernization initiatives.
+                            </p>
+                            <button onclick="window.open('mailto:yuva_endeavour@aol.com?subject=Enterprise Consulting Inquiry')" 
+                                    class="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg transition-colors">
+                                Discuss Consulting
+                            </button>
+                        </div>
+
+                        <div class="bg-purple-50 rounded-xl p-6 shadow-lg border-0">
+                            <h3 class="text-lg font-semibold text-slate-900 mb-3">Leadership Opportunities</h3>
+                            <p class="text-slate-700 text-sm leading-relaxed mb-4">
+                                Full-time executive roles in technology leadership, 
+                                program delivery, and enterprise architecture positions.
+                            </p>
+                            <button onclick="window.open('mailto:yuva_endeavour@aol.com?subject=Leadership Role Discussion')" 
+                                    class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg transition-colors">
+                                Explore Opportunities
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="bg-gradient-to-r from-slate-50 to-slate-100 rounded-xl p-8 shadow-lg border-0 text-center">
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4">
+                            Ready to Transform Your Technology Landscape?
+                        </h3>
+                        <p class="text-slate-700 leading-relaxed mb-6 max-w-2xl mx-auto">
+                            With 24+ years of proven experience in enterprise-scale transformations and 
+                            a track record of delivering $50M+ programs, I'm ready to accelerate your organization's 
+                            cloud and digital initiatives.
+                        </p>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <button onclick="window.open('mailto:yuva_endeavour@aol.com?subject=Let\'s Connect - Technology Leadership')" 
+                                    class="bg-slate-800 hover:bg-slate-700 text-white px-8 py-3 rounded-lg transition-colors">
+                                📧 Send Email
+                            </button>
+                            <button onclick="window.open('tel:+918123334373')" 
+                                    class="border-2 border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-3 rounded-lg transition-colors">
+                                📞 Call Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-300">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid lg:grid-cols-4 gap-8">
+                <div class="lg:col-span-2 space-y-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Yuvaraj Ilangovan</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            IT Software Cloud Services Global Delivery Management Leader specializing in enterprise-scale 
+                            cloud transformations and digital modernization for Fortune 100/500 organizations across international markets.
+                        </p>
+                    </div>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2 text-sm">
+                            <span>📧</span>
+                            <a href="mailto:yuva_endeavour@aol.com" class="hover:text-white transition-colors">
+                                yuva_endeavour@aol.com
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span>📞</span>
+                            <a href="tel:+918123334373" class="hover:text-white transition-colors">
+                                +91-8123334373
+                            </a>
+                        </div>
+                        <div class="flex items-center gap-2 text-sm">
+                            <span>📍</span>
+                            <span>Bangalore, India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-lg font-semibold text-white">Core Expertise</h4>
+                    <div class="space-y-2">
+                        <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full mr-2 mb-2 inline-block">Cloud Transformation</span>
+                        <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full mr-2 mb-2 inline-block">Digital Modernization</span>
+                        <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full mr-2 mb-2 inline-block">Enterprise Architecture</span>
+                        <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full mr-2 mb-2 inline-block">Program Delivery</span>
+                        <span class="text-xs px-2 py-1 bg-slate-800 text-slate-300 border border-slate-700 rounded-full mr-2 mb-2 inline-block">AI/ML Solutions</span>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h4 class="text-lg font-semibold text-white">Professional Status</h4>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-2">
+                            <span class="text-emerald-400">🌐</span>
+                            <span class="text-sm">H-1B Visa Holder</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-blue-400">🏆</span>
+                            <span class="text-sm">I-140 Approved</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="text-purple-400">📅</span>
+                            <span class="text-sm">Available Immediately</span>
+                        </div>
+                    </div>
+                    
+                    <div class="p-3 bg-slate-800 rounded-lg border border-slate-700">
+                        <div class="text-sm text-slate-300">
+                            <div class="font-medium text-white mb-1">Education</div>
+                            <div>MCA - IGNOU, Delhi</div>
+                            <div>B.Sc. Computer Science</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-700 mt-8 pt-8">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div class="text-sm text-slate-400">
+                        © 2024 Yuvaraj Ilangovan. All rights reserved.
+                    </div>
+                    
+                    <div class="flex items-center gap-4 text-sm text-slate-400">
+                        <span>24+ Years Global Delivery</span>
+                        <span>•</span>
+                        <span>Cloud Services Leadership</span>
+                        <span>•</span>
+                        <span>Fortune 100/500 Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling function
+        function scrollToSection(selector) {
+            const element = document.querySelector(selector);
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // PDF Resume Download Function
+        function downloadResume() {
+            // Create resume content for PDF
+            const resumeContent = `
+                YUVARAJ ILANGOVAN
+                IT Software Cloud Services Global Delivery Leader
+                
+                CONTACT:
+                📧 yuva_endeavour@aol.com
+                📞 +91-8123334373
+                📍 Bangalore, India
+                
+                PROFESSIONAL SUMMARY:
+                Seasoned IT Software Cloud Services Global Delivery Management leader with 24+ years of experience 
+                delivering enterprise-scale Cloud, Digital, IoT, AI/ML and Data Modernization programs for Fortune 100/500 organizations. 
+                Expertise in Microsoft Azure, GCP, AWS, and hybrid cloud transformations with proven track record of managing 
+                $5M-$25M programs and leading teams of 80-200 professionals across global markets.
+                
+                CORE COMPETENCIES:
+                • Cloud & Digital Transformation: Microsoft Azure, GCP, AWS, Salesforce Cloud, Multi-Cloud Deployments
+                • Enterprise Architecture: TOGAF, Solution Architecture, Microservices, API Management
+                • Program Management: SAFe Agile, P&L Ownership, Budget Control, Risk Management
+                • Emerging Technologies: AI/ML, IoT, RPA/IPA, Data Analytics, AIOps
+                
+                KEY EXPERIENCE:
+                
+                Onsite Delivery Manager – Cloud Services & Digital Practice Group
+                EPAM, USA | Mar 2021 – May 2024
+                • Led $8M+ CoreLogic Insurance Cloud Migration & Modernization programs
+                • Managed enterprise data engineering projects across financial services portfolios
+                • Collaborated with Cloud Infrastructure, Architecture, DevSecOps teams
+                
+                Account Delivery Manager – Digital Practice Group
+                LTIMindtree, New Jersey, USA | Mar 2016 – Mar 2021
+                • Directed multi-million-dollar Digital Transformation programs
+                • Managed 80-200 member teams across North America and offshore
+                • Executed $25M SAFe Agile program for UBS Bank wealth management
+                
+                EDUCATION & CERTIFICATIONS:
+                Education: MCA - IGNOU Delhi, B.Sc. Computer Science
+                Certifications: MS-Azure Cloud Specialist, TOGAF 9.2, Advanced RPA Professional
+                Currently Pursuing: SAFe Lean Portfolio Management 6.0, Data Science & AI for Managers
+                
+                PROFESSIONAL STATUS:
+                H-1B visa holder with approved I-140 | Authorized to work in the USA | Available for global relocation
+            `;
+            
+            // Create a blob with the resume content
+            const blob = new Blob([resumeContent], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            
+            // Create a temporary link and click it to download
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'Yuvaraj_Ilangovan_Resume.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+            
+            alert('Resume downloaded! For a professionally formatted PDF version, please contact me directly.');
+        }
+
+        // Add smooth scrolling to all anchor links
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add click event listeners to navigation links
+            const navLinks = document.querySelectorAll('a[href^="#"]');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = this.getAttribute('href');
+                    scrollToSection(target);
+                });
+            });
+        });
+    </script>
+</body>
 </html>
